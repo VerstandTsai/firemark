@@ -1,0 +1,103 @@
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/stackoverflow-dark.min.css" screen;
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/stackoverflow-light.min.css" print;
+
+body {
+  color: #ccc;
+  background-color: #111;
+  text-align: justify;
+  font-family: sans-serif;
+  margin: 1in calc(50vw - 20em)
+}
+
+a {
+  color: #9cf;
+}
+
+h1, h2 {
+  padding-bottom: .2em;
+  border-bottom: .1rem solid #333;
+}
+
+img {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  margin: 1em 0;
+  border-width: .2em 0;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+thead {
+  border-bottom: .1em solid;
+}
+
+th, td {
+  padding: .5em;
+}
+
+code {
+  font-size: .8em;
+}
+
+code:not(pre *) {
+  background-color: #222;
+  padding: .1em .4em;
+  border-radius: .2em;
+}
+
+pre {
+  border-radius: .2em;
+}
+
+@media screen {
+  hr {
+    margin: 4em 8em 0 8em;
+    height: 4em;
+    overflow: visible;
+    border: none;
+    border-top: .1em solid #666;
+    text-align: center;
+  }
+
+  hr::after {
+    content: "§";
+    font-size: 2em;
+    position: relative;
+    top: -.67em;
+    padding: 0 1em;
+    background-color: #111;
+  }
+}
+
+@media print {
+  body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+  }
+
+  a {
+    color: #36c;
+  }
+
+  h1, h2 {
+    border-color: #ddd;
+  }
+
+  code {
+    font-size: 1em;
+  }
+
+  code:not(pre *) {
+    background-color: #eee;
+  }
+
+  hr {
+    visibility: hidden;
+    break-after: page;
+  }
+}
+

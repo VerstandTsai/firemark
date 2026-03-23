@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Firemark",
+    "version": "1.0",
+    "description": "Renders Markdown files in Firefox",
+    "content_scripts": [
+        {
+            "matches": ["file:///*.md"],
+            "css": ["style.css"],
+            "js": ["inject.js"]
+        }
+    ]
+}
+
