@@ -4,6 +4,7 @@
 body {
   color: #ccc;
   background-color: #111;
+  hyphens: auto;
   text-align: justify;
   font-family: sans-serif;
   margin: 1in calc(50vw - 20em)
@@ -22,6 +23,12 @@ img {
   width: 100%;
 }
 
+blockquote {
+  margin-left: 0;
+  padding-left: 2em;
+  border-left: .5em solid #333;
+}
+
 table {
   width: 100%;
   margin: 1em 0;
@@ -36,10 +43,6 @@ thead {
 
 th, td {
   padding: .5em;
-}
-
-code {
-  font-size: .8em;
 }
 
 code:not(pre *) {
@@ -87,8 +90,8 @@ pre {
     border-color: #ddd;
   }
 
-  code {
-    font-size: 1em;
+  blockquote {
+    border-color: #eee;
   }
 
   code:not(pre *) {
