@@ -12,16 +12,21 @@ const injectInline = (code) => {
 };
 
 const jsDelivr = 'https://cdn.jsdelivr.net';
+document.documentElement.lang = 'en';
 injectSource(`${jsDelivr}/npm/marked/lib/marked.umd.js`, () => {
   injectInline(`
-    document.body.innerHTML =
-    marked.parse(document.body.firstElementChild.innerText);
+    const source = document.body.firstElementChild;
+    source.innerHTML = marked.parse(source.innerText);
   `);
+  const source = document.body.firstElementChild;
+  const destination = document.createElement('div');
+  destination.innerHTML = source.innerHTML;
+  document.body.prepend(destination);
+  source.remove();
   injectSource(`${jsDelivr}/gh/highlightjs/cdn-release/build/highlight.min.js`,
     () => injectInline(`hljs.highlightAll();`)
   );
   injectInline(`window.MathJax = {tex: {inlineMath: {'[+]': [['$', '$']]}}};`);
   injectSource(`${jsDelivr}/npm/mathjax@4/tex-chtml.js`);
 });
-document.documentElement.lang = 'en';
 

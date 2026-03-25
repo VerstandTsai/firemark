@@ -2,34 +2,41 @@
 @import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/stackoverflow-light.min.css" print;
 
 body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
   color: #ccc;
   background-color: #111;
+}
+
+body > div {
+  margin: 1in 0;
   hyphens: auto;
   text-align: justify;
   font-family: sans-serif;
-  margin: 1in calc(50vw - 20em)
+  width: calc(210mm - 2in);
 }
 
-a {
+body > div a {
   color: #9cf;
 }
 
-h1, h2 {
+body > div h1, body > div h2 {
   padding-bottom: .2em;
   border-bottom: .1rem solid #333;
 }
 
-img {
+body > div img {
   width: 100%;
 }
 
-blockquote {
+body > div blockquote {
   margin-left: 0;
   padding-left: 2em;
   border-left: .5em solid #333;
 }
 
-table {
+body > div table {
   width: 100%;
   margin: 1em 0;
   border-width: .2em 0;
@@ -37,26 +44,26 @@ table {
   border-collapse: collapse;
 }
 
-thead {
+body > div thead {
   border-bottom: .1em solid;
 }
 
-th, td {
+body > div th, body > div td {
   padding: .5em;
 }
 
-code:not(pre *) {
+body > div code:not(.hljs) {
   background-color: #222;
   padding: .1em .4em;
   border-radius: .2em;
 }
 
-pre {
+body > div pre {
   border-radius: .2em;
 }
 
 @media screen {
-  hr {
+  body > div hr {
     margin: 4em 8em 0 8em;
     height: 4em;
     overflow: visible;
@@ -65,7 +72,7 @@ pre {
     text-align: center;
   }
 
-  hr::after {
+  body > div hr::after {
     content: "§";
     font-size: 2em;
     position: relative;
@@ -77,28 +84,31 @@ pre {
 
 @media print {
   body {
-    margin: 0;
     color: #000;
     background-color: #fff;
   }
 
-  a {
+  body > div {
+    margin: 0;
+  }
+
+  body > div a {
     color: #36c;
   }
 
-  h1, h2 {
+  body > div h1, body > div h2 {
     border-color: #ddd;
   }
 
-  blockquote {
+  body > div blockquote {
     border-color: #eee;
   }
 
-  code:not(pre *) {
+  body > div code:not(.hljs) {
     background-color: #eee;
   }
 
-  hr {
+  body > div hr {
     visibility: hidden;
     break-after: page;
   }
