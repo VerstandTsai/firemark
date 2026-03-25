@@ -7,7 +7,8 @@
         {
             "matches": ["file:///*.md"],
             "css": ["style.css"],
-            "js": ["inject.js"]
+            "js": ["script.js"],
+            "world": "MAIN"
         }
     ]
 }
