@@ -59,6 +59,7 @@ body > div code:not(.hljs) {
 }
 
 body > div pre {
+  text-align: left;
   border-radius: .2em;
 }
 
