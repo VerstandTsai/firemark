@@ -28,6 +28,7 @@ body > div h1, body > div h2 {
 
 body > div img {
   width: 100%;
+  background-color: #fff8;
 }
 
 body > div blockquote {
