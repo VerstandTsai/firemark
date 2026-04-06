@@ -53,6 +53,11 @@ body > div th, body > div td {
   padding: .5em;
 }
 
+body > div code {
+  text-align: left;
+  hyphens: none;
+}
+
 body > div code:not(.hljs) {
   background-color: #222;
   padding: .1em .4em;
@@ -60,7 +65,6 @@ body > div code:not(.hljs) {
 }
 
 body > div pre {
-  text-align: left;
   border-radius: .2em;
 }
 
