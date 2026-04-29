@@ -45,7 +45,7 @@ body > div table {
   border-collapse: collapse;
 }
 
-body > div thead {
+body > div th {
   border-bottom: .1em solid;
 }
 
