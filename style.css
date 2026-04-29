@@ -68,6 +68,10 @@ body > div pre {
   border-radius: .2em;
 }
 
+body > div pre.mermaid {
+  background-color: #fff8;
+}
+
 @media screen {
   body > div hr {
     margin: 4em 8em 0 8em;
